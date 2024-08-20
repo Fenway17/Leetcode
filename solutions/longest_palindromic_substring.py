@@ -2,7 +2,6 @@
 Given a string s, return the longest palindromic substring in s
 """
 
-# can be improved by using Dynamic Programming using a 2D boolean array
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         result_str = ""
@@ -36,3 +35,25 @@ class Solution:
             index += 1
 
         return result_str
+    
+# can be improved by using Dynamic Programming using a 2D boolean array
+# where dp[i][j] will be True if the substring s[i:j+1] is a palindrome, and False otherwise; table is initialized with False values
+class SolutionDP:
+    def longestPalindrome(self, s: str) -> str:
+        if len(s) <= 1:
+            return s
+        
+        Max_Len=1
+        Max_Str=s[0]
+        dp = [[False for _ in range(len(s))] for _ in range(len(s))]
+        for i in range(len(s)): # represents expanding string of characters used
+            dp[i][i] = True # marks single character as palindrome
+            for j in range(i):
+                # check if characters match AND
+                # check for string length <=3 OR inner palindrome
+                if s[j] == s[i] and (i-j <= 2 or dp[j+1][i-1]): 
+                    dp[j][i] = True
+                    if i-j+1 > Max_Len:
+                        Max_Len = i-j+1
+                        Max_Str = s[j:i+1] # IMPORTANT slicing notation: includes j to i, excluding i+1
+        return Max_Str
