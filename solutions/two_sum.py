@@ -14,6 +14,7 @@ class Solution:
             remainder = target - num_first
             for index_second, num_second in enumerate(nums):
                 if index_second == index_first:
+                    # cannot choose the same index, skip
                     continue
                     
                 if remainder == num_second:
