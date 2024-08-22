@@ -2,8 +2,11 @@ from collections import Counter, deque
 
 # LISTS / RANGE / LEN
 nums = [1, 2, 3]
+nums2 = [4, 5, 6]
 nums = list({1, 2, 3}) # convert set to list
 nums.append(4) # adds to end of list
+nums.pop() # returns last element, removing it
+nums += nums2 # combine lists
 length = len(nums)
 # range(stop), range(start, stop), range(start, stop, step)
 range_nums = range(5) # gives a list of n numbers starting from 0; aka the number 5 is not in it
