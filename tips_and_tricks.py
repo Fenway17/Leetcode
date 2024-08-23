@@ -62,3 +62,8 @@ max(1, 2)
 # Dynamic Programming
 # 2D array of False; represents start and end index of substring that can be split properly
 dp = [[False for index in range(len(s))] for index in range(len(s))]
+
+# STRING -> INT / FLOAT
+str(1)
+int("1")
+float("1.0")
