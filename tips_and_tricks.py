@@ -32,8 +32,8 @@ for index, num in enumerate(nums): # obtain index and item
 
 # SET is hash based, referring to an element is O(1)
 # operators: "|" union, "&" intersection, "-" difference, "^" symmetric difference (in either, not both)
-nums = [1, 2, 3] 
-nums_set = set(nums) # no duplicates allowed; {1, 2, 3}
+nums_set = {1, 2, 3}
+nums_set = set(nums) # no duplicates allowed
 nums_set.add(4)
 nums_set.remove(4) # can throw KeyError if element missing
 nums_set.discard(4) # won't throw KeyError
