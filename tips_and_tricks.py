@@ -1,4 +1,5 @@
 from collections import Counter, deque
+import random
 
 # LISTS / RANGE / LEN
 nums = [1, 2, 3]
@@ -8,6 +9,7 @@ nums.append(4) # adds to end of list
 nums.pop() # returns last element, removing it
 nums += nums2 # combine lists
 length = len(nums)
+random.choice(nums) # random number generator from list
 # range(stop), range(start, stop), range(start, stop, step)
 range_nums = range(5) # gives a list of n numbers starting from 0; aka the number 5 is not in it
 range_nums = range(length)
@@ -18,6 +20,7 @@ sorted_target = sorted(nums)
 # DICTIONARY
 dict = {1: "one", 2: "two", 3: "three"}
 dict.get(1, None) # gets 1, or None, if it does not exist
+dict.pop(1, 0) # returns value of key 1, else return default 0; if no default given, will throw error on missing key
 for key, value in dict.items(): # obtain key and value
     pass
 
