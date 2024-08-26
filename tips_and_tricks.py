@@ -17,17 +17,19 @@ range_nums = range(length)
 # SORT the target list
 sorted_target = sorted(nums)
 
+# TUPLES
+nums_tuple = (1, 2, 3) # unchangeable; 0-indexed
+
 # DICTIONARY
 dict = {1: "one", 2: "two", 3: "three"}
 dict.get(1, None) # gets 1, or None, if it does not exist
-dict.pop(1, 0) # returns value of key 1, else return default 0; if no default given, will throw error on missing key
+dict.pop(1, 0) # returns AND removes value of key 1, else return default 0; if no default given, will throw error on missing key
 for key, value in dict.items(): # obtain key and value
     pass
 
 # COUNTER (subclass of DICTIONARY)
-def find_number_with_counter(arr, target):
-    counter = Counter(arr) # counts occurrences of each element; quick way to convert array to dict type object
-    return counter[target] > 0  # Returns True if the target exists, otherwise False
+counter = Counter(nums) # counts occurrences of each element; quick way to convert array to dict type object
+counter[1] > 0  # Returns True if the target exists, otherwise False
 
 # INDEX + ITEMS
 for index, num in enumerate(nums): # obtain index and item
@@ -57,6 +59,8 @@ item = queue.popleft() # pop() is for the right side
 # does not include end index
 s = "Hello"
 substring = s[0:3] # takes index 0 to 2
+char_index = s[0] # returns 'H'
+str_list = s.split("e") # splits string on "e" into multiple strings
 
 # MATH MIN / MAX
 min(1, 2)
