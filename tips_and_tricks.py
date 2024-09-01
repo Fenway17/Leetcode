@@ -59,7 +59,8 @@ item = queue.popleft() # pop() is for the right side
 # does not include end index
 s = "Hello"
 substring = s[0:3] # takes index 0 to 2
-char_index = s[0] # returns 'H'
+char = s[0] # returns 'H'
+char_index = s.index(char) # returns index
 str_list = s.split("e") # splits string on "e" into multiple strings
 
 # MATH MIN / MAX
