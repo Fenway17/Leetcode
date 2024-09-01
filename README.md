@@ -1,6 +1,6 @@
-# Leetcode question solution repository
+# Leetcode question solution archive
 
-Personal repository for storing and documenting Leetcode questions and personal solutions.  
+Personal archive documenting Leetcode questions and my personal solutions.  
 All solutions are hand written by me unless stated otherwise in a disclaimer above the solution.  
 I do not own any of these questions, they are instead taken from and owned by [Leetcode](https://leetcode.com).
 
