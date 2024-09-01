@@ -65,6 +65,7 @@ str_list = s.split("e") # splits string on "e" into multiple strings
 # MATH MIN / MAX
 min(1, 2)
 max(1, 2)
+num = 3 // 2 # floor divide operator; = 1
 
 # Dynamic Programming
 # 2D array of False; represents start and end index of substring that can be split properly
