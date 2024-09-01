@@ -46,7 +46,7 @@ nums_set_two = nums_set.copy()
 
 # QUEUE / STACKS
 queue = deque() # deque() is a queue with append and pops for left or right
-queue.add(1)
+queue.append(1)
 item = queue.popleft() # pop() is for the right side
 
 # TWO POINTERS / SLIDING WINDOW
