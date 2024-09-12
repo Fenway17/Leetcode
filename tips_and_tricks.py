@@ -1,4 +1,5 @@
 from collections import Counter, deque
+from functools import cache
 import random
 
 # LISTS / RANGE / LEN
@@ -71,3 +72,8 @@ float("1.0")
 
 # 2D array of False; represents start and end index of substring that can be split properly
 dp = [[False for index in range(len(s))] for index in range(len(s))]
+
+# CACHING recursion function, use for memoizing recursion results
+@cache
+def recursionHelper(a, b):
+    pass
