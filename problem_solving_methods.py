@@ -6,6 +6,9 @@
 # Dynamic Programming 1 - Memoization
 # given multiple "options", start from considering only 1 of them, and slowly add in more options into the problem
 # each step should record its results, accounting for previous results
+# useful for problems relating to "positions"
+# -------------
+# create array / table of past results
 
 # Dynamic Programming 2 - Recurrence Relation
 # find number of ways "something" can be done
@@ -16,3 +19,5 @@
 # define a recursive function to help solve the problem
 # - create and ensure base cases are correct
 # - possibly use @cache to cache results of recursive function
+#   - @cache does the memoization work for the solution
+#   - might not always be an optimal runtime if @cache is not usable
