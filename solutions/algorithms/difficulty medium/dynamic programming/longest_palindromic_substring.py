@@ -38,7 +38,7 @@ class Solution:
     
 # can be improved by using Dynamic Programming using a 2D boolean array
 # where dp[i][j] will be True if the substring s[i:j+1] is a palindrome, and False otherwise; table is initialized with False values
-# DISCLAIMER: this answer is taken from Leetcode Solutions discussion tab, not created by me
+# DISCLAIMER: this answer is taken from LeetCode Solutions discussion tab, not created by me
 class SolutionDP:
     def longestPalindrome(self, s: str) -> str:
         if len(s) <= 1:

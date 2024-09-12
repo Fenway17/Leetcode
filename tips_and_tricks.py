@@ -49,11 +49,6 @@ queue = deque() # deque() is a queue with append and pops for left or right
 queue.append(1)
 item = queue.popleft() # pop() is for the right side
 
-# TWO POINTERS / SLIDING WINDOW
-# use 2 separate pointers
-# sliding window moves right pointer first, then left pointer if some condition is met
-# two pointers sometimes have both pointers start at opposite ends
-
 # SUBSTRINGS
 # string[start:end:step]: slices the string from start to end, taking every step-th character.
 # does not include end index
@@ -67,12 +62,12 @@ str_list = s.split("e") # splits string on "e" into multiple strings
 min(1, 2)
 max(1, 2)
 num = 3 // 2 # floor divide operator; = 1
-
-# Dynamic Programming
-# 2D array of False; represents start and end index of substring that can be split properly
-dp = [[False for index in range(len(s))] for index in range(len(s))]
+difference = abs(3 - 5) # returns positive number 2
 
 # STRING -> INT / FLOAT
 str(1)
 int("1")
 float("1.0")
+
+# 2D array of False; represents start and end index of substring that can be split properly
+dp = [[False for index in range(len(s))] for index in range(len(s))]
