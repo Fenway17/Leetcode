@@ -14,4 +14,5 @@
 # can be used to ultimately find number of solutions or best solution for a given problem
 # -------------
 # define a recursive function to help solve the problem
-# - ensure base cases are correct
+# - create and ensure base cases are correct
+# - possibly use @cache to cache results of recursive function
