@@ -13,7 +13,32 @@ The answer is guaranteed to fit into a signed 32-bit integer.
 from functools import cache
 from typing import List
 
+# solution using Dynamic Programming table
 class Solution:
+    def change(self, amount: int, coins: List[int]) -> int:
+        dp = [[0 for index in range(len(coins))] for index in range(amount+1)]
+        
+        for index in range(len(coins)):
+            dp[0][index] = 1 # 1 ways to make up amount 0 with any set of coins
+        
+        for coin_index in range(len(coins)):
+            for amount_index in range(1, amount+1): # do not update amount = 0
+                if amount_index - coins[coin_index] >= 0:
+                    # possible to use coin
+
+                    # take previous result
+                    dp[amount_index][coin_index] = dp[amount_index-coins[coin_index]][coin_index]
+
+                # check if result index exists if this coin is not used at all
+                if coin_index - 1 >= 0:
+                    # add those combinations into total
+                    dp[amount_index][coin_index] += dp[amount_index][coin_index-1]
+        
+        print(dp)
+        return dp[amount][len(coins)-1]
+
+# this solution works as well
+class Solution2:
     def change(self, amount: int, coins: List[int]) -> int:
         # returns the number of combinations
         # @cache is IMPORTANT for improving runtime performance
