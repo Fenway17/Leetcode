@@ -7,7 +7,9 @@ nums = [1, 2, 3]
 nums2 = [4, 5, 6]
 nums = list({1, 2, 3})  # convert set to list
 nums.append(4)  # adds to end of list
+nums.remove(4)  # removes FIRST occurrence of 4
 nums.pop()  # returns last element, removing it
+nums.pop(2)  # returns element at index 2, removing it
 nums += nums2  # combine lists
 length = len(nums)
 random.choice(nums)  # random number generator from list
@@ -67,6 +69,8 @@ min(1, 2)
 max(1, 2)
 num = 3 // 2  # floor divide operator; = 1
 difference = abs(3 - 5)  # returns positive number 2
+negative_infinity = float('-inf')
+infinity = float('inf')
 
 # STRING -> INT / FLOAT
 str(1)
