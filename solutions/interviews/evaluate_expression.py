@@ -45,21 +45,35 @@ def evaluate(expression: str):
             # next parenthesis to evaluate, unload the stack and evaluate this sub expression
             result = 0
 
-        while (stack.size() > 1):
-            item = stack.pop() # grabs and remove item from stack
-            # check if integer, if so check stack for possible negative
-            if item.isinstance(int):
-                # processing integers
-                next_item = stack.pop()
+            while (stack.size() > 1):
+                item = stack.pop() # grabs and remove item from stack
+                # check if integer, if so check stack for possible negative
+                if item.isinstance(int):
+                    # processing integers
+                    next_item = stack.pop()
+                    
+                    if next_item == '-':
+                        item = 0 - item # convert to negative value
                 
-                if next_item == '-':
-                    item = 0 - item # convert to negative value
+                    # add to result
+                    result += item
+                    
+                    # check end of sub expression
+                    if item == '(' or None:
+                        stack.append(result)
+    
+    result = 0            
+    while (stack.size() > 1):
+        item = stack.pop() # grabs and remove item from stack
+        # check if integer, if so check stack for possible negative
+        if item.isinstance(int):
+            # processing integers
+            next_item = stack.pop()
             
-                # add to result
-                result += item
-                
-                # check end of sub expression
-                if item == '(' or None:
-                    stack.append(result)
-                
+            if next_item == '-':
+                item = 0 - item # convert to negative value
+        
+            # add to result
+            result += item
+    
     return stack.pop() # final result

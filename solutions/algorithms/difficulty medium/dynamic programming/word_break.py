@@ -12,7 +12,7 @@ class Solution:
         # 2D array of False; represents start and end index of substring that can be split properly
         dp = [[False for index in range(len(s))] for index in range(len(s))] # range starts from 0
 
-        # incrementally expand string used
+        # incrementally expand string used; imagine "i" as "end"/"right" and "j" as "start"/"left"
         for i in range(len(s)): # represents end index of string
             for j in range(i+1): # i+1 to account for single char substring
                 substring = s[j:i+1] # slice operator excludes end index
