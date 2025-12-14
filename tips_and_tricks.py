@@ -67,7 +67,8 @@ str_list = s.split("e")  # splits string on "e" into multiple strings
 # MATH MIN / MAX
 min(1, 2)
 max(1, 2)
-num = 3 // 2  # floor divide operator; = 1
+quotient_num = 3 // 2  # floor divide operator; = 1
+remainder_num = 3 % 2  # modulo operator; = 1
 difference = abs(3 - 5)  # returns positive number 2
 negative_infinity = float('-inf')
 infinity = float('inf')
