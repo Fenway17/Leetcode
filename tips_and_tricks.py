@@ -11,16 +11,25 @@ nums.remove(4)  # removes FIRST occurrence of 4
 nums.pop()  # returns last element, removing it
 nums.pop(2)  # returns element at index 2, removing it
 nums += nums2  # combine lists
+# list[start : stop : step]
+nums_first_3 = nums[:3]  # gets the first 3 items (excluding index 3)
+nums_every_second = nums[::2]  # returns every 2nd element (starting from index 0)
 length = len(nums)
 random.choice(nums)  # random number generator from list
 # range(stop), range(start, stop), range(start, stop, step)
 range_nums = range(5)  # gives a list of n numbers starting from 0; aka the number 5 is not in it
 range_nums = range(length)
+for i in range(5):  # iterates from 0 to 4 (not to 5)
+    # useful for iterating while tracking index
+    pass
 
 # SORT the target list
 sorted_target = sorted(nums)
-paired_list = list(zip(nums, nums2))
+sorted_target_reversed = sorted(nums, reverse=True)  # reverses sort; largest first
+paired_list = list(zip(nums, nums2))  # creates a list of tuples
 paired_list.sort(key=lambda item: item[0])  # sort based on first list
+    # explanation: key takes in a function
+    # lambda is a lambda function, of which each item in the list returns item[0] as the element to use for sorting
 first, second = zip(*paired_list)  # extract out the sorted lists
 
 # TUPLES
